@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AaiJeeApp" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="fontFamily">@font/calibri_regular</item>
+    </style>
+
+    <style name="Theme.AaiJeeApp" parent="Base.Theme.AaiJeeApp" />
+
+    <style name="MyDarkToolbarStyle" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/colorAccentLight</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+</resources>

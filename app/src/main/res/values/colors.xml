@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d2040d</color>
+    <color name="colorPrimaryDark">#d2040d</color>
+    <color name="colorAccent">#fa4041</color>
+    <color name="colorAccentLight">#fa4041</color>
+    <color name="colorAccentLightLight">#fa4041</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#333333</color>
+    <color name="colorBlack1">#9E5E4D4D</color>
+    <color name="colorRed">#d2040d</color>
+    <color name="colorRedLight">#fa4041</color>
+    <color name="colorGrey">#F4F4F4</color>
+    <color name="colorGrey1">#cccccc</color>
+    <color name="colorGreyDark">#666666</color>
+    <color name="colorPink">#ff0055</color>
+    <!--ffb3b3-->
+    <color name="colorToolbar">#ffffff</color>
+    <color name="colorgreyLight">#f2f2f2</color>
+    <color name="colorGreen">#000000</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="colorDarkBlue">#232653</color>
+
+    <color name="saved_location_default_tag_backgrond">#ff9e83d6</color>
+    <color name="saved_location_home_tag_background">#ffe56161</color>
+    <color name="saved_location_office_tag_backgrond">#ff3373bd</color>
+</resources>

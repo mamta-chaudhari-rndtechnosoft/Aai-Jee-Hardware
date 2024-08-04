@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="160dp">
+
+    <ImageView
+        android:id="@+id/img_steps"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_margin="5dp"
+        android:src="@mipmap/aaijee" />
+
+    <TextView
+        android:id="@+id/tv_steps"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@id/img_steps"
+        android:layout_width="match_parent"
+        android:maxLines="2"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+
+</RelativeLayout>

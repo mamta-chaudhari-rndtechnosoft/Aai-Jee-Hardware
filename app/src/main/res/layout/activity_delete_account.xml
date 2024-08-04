@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.DeleteAccountActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Delete Account"
+        android:textAlignment="center"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/colorWhite"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDeleteAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:layout_marginVertical="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:textColor="@color/colorWhite"
+        android:text="Delete"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="@dimen/_16ssp"
+        />
+
+</LinearLayout>

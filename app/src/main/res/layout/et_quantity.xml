@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_centerInParent="true"
+    android:background="@color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:elevation="10dp"
+        android:padding="@dimen/_10ssp"
+        app:cardBackgroundColor="#FFFDFD"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="91dp"
+                android:layout_height="69dp"
+                android:layout_gravity="center"
+                android:elevation="@dimen/_8ssp"
+                android:src="@drawable/shopping"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.154" />
+
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:elevation="@dimen/_10ssp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="name"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                app:layout_constraintVertical_bias="0.093" />
+
+
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="240dp"
+                android:layout_height="47dp"
+                android:gravity="center"
+                android:hint="enter quantity"
+                android:padding="10dp"
+                android:textColor="#9E9797"
+                android:textStyle="bold"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_name"
+                app:layout_constraintVertical_bias="0.043" />
+
+            <TextView
+                android:id="@+id/action_ok"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/colorRed"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:elevation="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/input"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="@+id/input"
+                app:layout_constraintTop_toBottomOf="@+id/input"
+                app:rippleColor="@color/colorWhite" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/action_cancel"
+                android:layout_width="48dp"
+                android:layout_height="29dp"
+                android:elevation="@dimen/_10ssp"
+                android:padding="@dimen/_2ssp"
+                android:src="@drawable/multiply"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.015" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

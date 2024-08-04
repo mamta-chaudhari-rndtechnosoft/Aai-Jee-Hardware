@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_alignParentStart="true"
+            app:titleTextColor="@color/colorBlack"
+            android:layout_width="match_parent"
+            app:title="@string/select_your_location"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+        <LinearLayout
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="16dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:text="Search for delivery location"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="5dp"/>
+
+                <EditText
+                    android:id="@+id/searchTextView"
+                    android:textSize="16dp"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="fill_parent"
+                    android:background="@color/colorWhite"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/enter_location"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/_10sdp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/colorGrey"
+                    android:layout_height="0.5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/selectViaMap"
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:text="Search for delivery location"
+                    android:inputType="textCapWords"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="5dp"
+                    android:background="@drawable/ic_location"/>
+
+                <TextView
+                    android:id="@+id/maptext"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16dp"
+                    android:layout_width="fill_parent"
+                    android:background="@color/colorWhite"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:text="Select location via map"
+                    android:padding="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_height="0dp">
+
+                <TextView
+                    android:id="@+id/saved_addresses"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="12dp"
+                    android:layout_width="fill_parent"
+                    android:background="@color/colorWhite"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:text="Saved Addresses"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorWhite" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progresbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

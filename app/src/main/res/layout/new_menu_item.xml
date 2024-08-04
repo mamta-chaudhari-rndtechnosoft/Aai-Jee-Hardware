@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    android:id="@+id/linear_layout"
+    android:paddingLeft="@dimen/_5sdp"
+    android:paddingRight="@dimen/_5sdp">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="@dimen/_5ssp"
+        app:cardUseCompatPadding="true"
+        android:outlineSpotShadowColor="@color/colorRed"
+        app:cardCornerRadius="@dimen/_5ssp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    app:cardUseCompatPadding="true"
+        android:layout_margin="5dp"
+    app:cardCornerRadius="2dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5">
+
+        <ImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_empty_cart"
+            app:civ_circle_background_color="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/tvDiscountPer"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@drawable/discount_lay"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="30%"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_8ssp" />
+
+    </RelativeLayout>
+
+  </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="7.5"
+
+                android:layout_margin="@dimen/_5sdp"
+                >
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Brown Cupcakes"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:maxLines="2"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/tvDesc"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lorem"
+                    android:textSize="@dimen/_10ssp"
+                    android:maxLines="2"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+                   >
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$150"
+                        android:textSize="@dimen/_16ssp"
+                        android:textColor="@color/colorRed"
+                        android:textStyle="bold"
+                        android:gravity="left"/>
+
+                    <TextView
+                        android:id="@+id/tvDiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_18ssp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:textColor="@color/colorGrey1"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/_10sdp">
+
+                    <Spinner
+                        android:id="@+id/spinner_variant"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/addcart_drawable"
+                        android:gravity="center" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/ll"
+                            android:visibility="gone"
+                            android:gravity="center">
+
+                            <!--                    <ImageView-->
+                            <!--                        android:id="@+id/imgDesc"-->
+                            <!--                        android:layout_width="@dimen/_20sdp"-->
+                            <!--                        android:layout_height="@dimen/_20sdp"-->
+                            <!--                        android:src="@drawable/ic_decrement"/>-->
+
+                            <TextView
+                                android:id="@+id/tvQty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="@dimen/_8sdp"
+                                android:layout_marginRight="@dimen/_8sdp"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_18ssp"/>
+
+                            <!--                    <ImageView-->
+                            <!--                        android:id="@+id/imgIncr"-->
+                            <!--                        android:layout_width="@dimen/_20sdp"-->
+                            <!--                        android:layout_height="@dimen/_20sdp"-->
+                            <!--                        android:src="@drawable/ic_increment"/>-->
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+    <!--LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_weight="2.5">
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$150"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@color/colorRed"
+            android:layout_gravity="end"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgDesc"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_decrement"/>
+
+            <TextView
+                android:id="@+id/tvQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_16ssp"/>
+
+            <ImageView
+                android:id="@+id/imgIncr"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_increment"/>
+
+        </LinearLayout>
+
+    </LinearLayout-->
+
+</LinearLayout>

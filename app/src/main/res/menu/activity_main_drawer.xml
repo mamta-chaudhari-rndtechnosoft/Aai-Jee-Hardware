@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group>
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+
+        <!--<item
+            android:id="@+id/restaurant"
+            android:icon="@drawable/ic_fork"
+            android:title="@string/hotel" />-->
+
+        <item
+            android:id="@+id/myorder"
+            android:icon="@drawable/checklist"
+            android:title="@string/myorders" />
+
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/profile" />
+
+        <item
+            android:id="@+id/customer"
+            android:icon="@drawable/ic_profile"
+            android:title="Customer Panel" />
+
+        <item
+            android:id="@+id/contact_us"
+            android:icon="@drawable/ic_contact"
+            android:title="FeedBack" />
+
+        <item
+            android:id="@+id/rate_app"
+            android:icon="@drawable/ic_rate"
+            android:title="@string/rate_app" />
+
+        <item
+            android:id="@+id/share_app"
+            android:icon="@drawable/ic_share"
+            android:title="@string/share_app" />
+
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/ic_about"
+            android:title="@string/contact_us" />
+
+        <item
+            android:id="@+id/privacy_policy"
+            android:icon="@drawable/ic_privacy"
+            android:title="@string/privacy_policy" />
+
+        <item
+            android:id="@+id/pdf"
+            android:icon="@drawable/ic_baseline_picture_as_pdf_24"
+            android:title="PDF" />
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout" />
+
+        <item
+            android:id="@+id/delete"
+            android:icon="@drawable/ic_delete"
+            android:title="Delete Account" />
+
+    </group>
+
+</menu>

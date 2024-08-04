@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorGrey"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@drawable/shape_gradient_top_shadow"
+        app:layout_anchor="@id/bottom_sheet" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_alignParentStart="true"
+            app:titleTextColor="@color/colorBlack"
+            android:layout_width="match_parent"
+            app:title="@string/select_your_location"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+        <LinearLayout
+            android:layout_below="@id/toolbar"
+            android:layout_above="@id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/_5sdp">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                tools:context=".activity.MapsActivity" />
+
+            <LinearLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_height="0dp">
+                <ScrollView
+                    android:layout_above="@+id/llend"
+                    android:layout_below="@+id/app_bar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/edtFlat"
+                            android:textSize="16dp"
+                            android:focusableInTouchMode="true"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginBottom="10dp"
+                            android:hint="@string/flat"
+                            android:inputType="textCapWords"
+                            android:background="@drawable/login_edittext_background"
+                            android:padding="10dp"/>
+
+                        <EditText
+                            android:textSize="16dp"
+                            android:layout_below="@+id/edtFlat"
+                            android:focusableInTouchMode="true"
+                            android:id="@+id/edtBuilding"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginBottom="10dp"
+                            android:hint="@string/building"
+                            android:inputType="textCapWords"
+                            android:background="@drawable/login_edittext_background"
+                            android:padding="10dp"/>
+
+                        <EditText
+                            android:id="@+id/edtlandmark"
+                            android:textSize="16dp"
+                            android:layout_below="@+id/edtBuilding"
+                            android:focusableInTouchMode="true"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginBottom="10dp"
+                            android:hint="@string/landmark"
+                            android:inputType="textCapWords"
+                            android:background="@drawable/login_edittext_background"
+                            android:padding="10dp"/>
+
+                        <EditText
+                            android:id="@+id/edtcity"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginBottom="10dp"
+                            android:hint="@string/city"
+                            android:layout_below="@+id/edtlandmark"
+                            android:focusableInTouchMode="true"
+                            android:inputType="textCapWords"
+                            android:background="@drawable/login_edittext_background"
+                            android:padding="10dp"/>
+
+
+                        <EditText
+                            android:id="@+id/edtpincode"
+                            android:layout_below="@+id/edtcity"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginBottom="10dp"
+                            android:focusableInTouchMode="true"
+                            android:hint="@string/pincode"
+                            android:inputType="textCapWords"
+                            android:padding="10dp"
+                            android:background="@drawable/login_edittext_background"
+                            android:textSize="16dp"/>
+
+                        <Spinner
+                            android:id="@+id/spinner_area"
+                            android:layout_below="@id/edtpincode"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/login_edittext_background"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/spinner_area"
+                            android:gravity="center"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/txthome"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/rounded_gray_border_btn"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="Home"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txtoffice"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/rounded_gray_border_btn"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="Office"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txtothers"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/rounded_gray_border_btn"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="Others"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </ScrollView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:saveEnabled="false"
+            android:visibility="visible"
+            android:layout_gravity="bottom"
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="horizontal"
+            app:layout_behavior=".activity.FixedBottomViewBehavior"
+            android:paddingTop="8dp">
+            <ImageView
+                android:id="@+id/location_icon"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_location"
+                android:layout_alignParentStart="true"/>
+            <LinearLayout
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@id/location_icon"
+                android:layout_toRightOf="@id/location_icon"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/address">
+
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorGreyDark"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="location"
+                    android:textColor="@color/colorGreyDark" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/group_divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/address"
+                android:background="@color/colorGrey"/>
+
+            <Button
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_btn"
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_below="@id/group_divider"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="@string/next"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"/>
+
+        </RelativeLayout>
+        <ProgressBar
+            android:id="@+id/progresbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
